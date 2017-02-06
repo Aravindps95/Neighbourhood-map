@@ -1,0 +1,48 @@
+body,html
+{
+    display: flex;
+    height: 100%;
+    width:100%;
+     margin: 0;
+     padding: 0;
+     font-family: "Times New Roman", Times, serif;
+}
+.title{
+    font-size:20px;
+    margin-bottom:0;
+}
+.place{
+    margin-bottom:0;
+    font-size:20px;
+}
+.search{
+    width:100%;
+    margin-top:0;
+}
+.address{
+    font-size:15px;
+    font-family: "Arial, Helvetica";
+    color:red;
+    margin-top:0;
+}
+.menu {
+    background-image: url("../img/background3.jpg");
+    padding-left: 10px;
+    width : 30%;
+
+}
+
+.namelist{
+    cursor: pointer;
+}
+
+#map
+{
+    flex-grow : 1;
+    width: 100%;
+}
+#panorama
+{
+  height: 200px;
+  width: 350px;
+}
