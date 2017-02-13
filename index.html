@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width,initial-scale=1.0">
-       <meta charset="utf-8">
-       <title>Neighbourhood-Map</title>
-       <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-       <div class="menu">
-                <h3 class="title">Tamilnadu : Places Of Interest</h3>
-                <p class="place"> Search for your place</p>
-                    <input class="search" type="search" placeholder="Ex:Marina Beach" data-bind="value: filtersearch,valueUpdate: 'keyup'">
-                <ul class="list" data-bind="foreach: search">
-                    <li class="namelist" data-bind="text: name, click: $parent.clickonsearchplaces"></li>
-                    <p class="address" data-bind="text:address"></p>
-                </ul>
-        </div>
-
-       <div id="map"> </div>
-   <script src="js/knockout.js"></script>
-   <script src="js/jquery-3.1.1.min.js"></script>
-   <script src="js/script.js"></script>
- 
-   <script async defer
-        src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyA2ibb32cwQRwopMlacWUGjMIT-APlm9zM&callback=initMap" onerror="googleError()">
-   </script>
- </body>
+  <head>
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width,initial-scale=1.0">
+    <meta charset = "utf-8">
+    <title> Neighbourhood-Map </title>
+    <link rel = "stylesheet" href = "css/style.css">
+  </head>
+  <body>
+    <div class = "main">
+        <h3 class = "title">Tamilnadu : Places To Visit</h3>
+        <br>
+        <div class = "place"> Search for your place</div>
+        <input  type = "search" class = "search" placeholder = "Ex:Marina Beach" data-bind = "value: placefilter, valueUpdate: 'keyup'">
+        <ul class = "list" data-bind = "foreach: search">
+          <li class = "listname" data-bind = "text: title, click: $parent.searchplacesclicked"></li>
+          <p class = "address" data-bind = "text:address"></p>
+        </ul>
+    </div>
+    <div id="map"> </div>
+    <script src = "js/script.js"></script>
+    <script src = "js/knockout.js"></script>
+    <script src = "js/jquery-3.1.1.min.js"></script>
+    <script async defer
+        src = "https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyA2ibb32cwQRwopMlacWUGjMIT-APlm9zM&callback=initMap" onerror = "googleError()">
+    </script>
+  </body>
 </html>
